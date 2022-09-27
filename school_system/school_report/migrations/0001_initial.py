@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
                 ('first_name', models.CharField(blank=True, max_length=32)),
                 ('last_name', models.CharField(blank=True, max_length=32)),
-                ('school_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school_db.school')),
+                ('school_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school_report.school')),
             ],
         ),
     ]
