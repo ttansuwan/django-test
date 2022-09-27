@@ -11,4 +11,4 @@ class Student(models.Model):
     id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
     first_name = models.CharField(max_length=32, blank=True, null=False)
     last_name = models.CharField(max_length=32, blank=True, null=False)
-    school_id = models.ForeignKey(School, on_delete=models.CASCADE)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
