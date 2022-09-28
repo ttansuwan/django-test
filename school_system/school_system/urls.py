@@ -16,13 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
+from rest_framework_nested import routers
+
 from school_report.views import StudentViewSet, SchoolViewSet
+from nested_school_system.views import NestedStudentViewSet
 
 router = routers.DefaultRouter()
 router.register(r'students', StudentViewSet)
 router.register(r'schools', SchoolViewSet)
 
+nested_router = routers.NestedSimpleRouter(router, r'schools', lookup='school')
+nested_router.register(r'students', NestedStudentViewSet, basename='students')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('', include(router.urls)),
+    path('', include(nested_router.urls))
 ]
