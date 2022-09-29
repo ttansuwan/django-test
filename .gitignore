@@ -4,3 +4,8 @@ __pycache__/
 *$py.class
 .vscode/
 *.json
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3

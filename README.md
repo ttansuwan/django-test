@@ -8,8 +8,9 @@ Interview assignment to evaluate how good you are with building APIs with Django
 |  Setting up git   |   27/09   | 10m |
 |  Step 1 - Setup       |    26/09  | 30m |
 |  Step 1 - Model    |   26/09   | 15m | 
-| Step 2 - DRF Endpoints   | 27/09   | 3hrs |
-| Step 3 - Nested Endpoints   |   | |
+| Step 2 - DRF Endpoints   | 27/09   | 4hrs |
+| Step 3 - Nested Endpoints   | 28/09  | 2hrs |
+|  Deploying to Heroku |   |   |
 
 
 ## Usage

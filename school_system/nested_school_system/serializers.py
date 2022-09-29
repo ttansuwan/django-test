@@ -8,13 +8,15 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = '__all__'
+        optional_fields = ['school', ]
         extra_kwargs = {
             "id": {"required": False},
+            "school__id" : {"required": False}
         }
 
     
     def create(self, validated_data):
-        school_id = validated_data['school'].id
+        school_id = self.context["view"].kwargs["school_pk"]
         school_max = validated_data['school'].max_student
         total_student = Student.objects.filter(school_id=school_id).count()
         if total_student < school_max:
