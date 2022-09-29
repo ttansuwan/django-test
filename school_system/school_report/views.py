@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from school_report.models import School, Student
 from rest_framework.viewsets import ViewSet, ModelViewSet
-from rest_framework import permissions
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from school_report.daos import get_students
@@ -14,7 +14,7 @@ class StudentViewSet(ModelViewSet):
     """
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [AllowAny]
     
 class SchoolViewSet(ModelViewSet):
     """
@@ -22,4 +22,4 @@ class SchoolViewSet(ModelViewSet):
     """
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [AllowAny]
