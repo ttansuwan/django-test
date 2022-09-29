@@ -30,7 +30,7 @@ python manage.py runserver
 ```
 
 ## Paths
-All path with {pk} are available in GET/PUT/PATCH/DELETE
+All path with {pk} are available in GET/PUT/PATCH/DELETE\
 All path with no specific {pk} are available in GET/POST
 
 ### Students
