@@ -1,5 +1,6 @@
 from school_report.models import School, Student
 from rest_framework import serializers
+from school_system.paginations import CustomPagination
 
 class StudentSerializer(serializers.ModelSerializer):
     parent_lookup_kwargs = {
