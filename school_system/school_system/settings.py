@@ -14,6 +14,11 @@ from pathlib import Path
 import dj_database_url
 import django_heroku
 import os
+from corsheaders.middleware import CorsMiddleware
+from corsheaders.middleware import CorsMiddleware
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,11 +33,30 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['agile-waters-63686.herokuapp.com']
-
+CORS_ORIGIN_ALL_ALL =True
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://\w+\.example\.com$",
+]
+CORS_URLS_REGEX = r"^/api/.*$"
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'school_report',
@@ -131,7 +155,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES':['rest_framework.permissions.IsAuthenticated'],
+    'DEFAULT_AUTHENTICATION_CLASSES':[],
     'DEFAULT_PERMISSION_CLASSES':[]
 }
 
