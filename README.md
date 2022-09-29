@@ -1,16 +1,9 @@
 # API School & Students - Test
 
 Interview assignment to evaluate how good you are with building APIs with Django.
-<<<<<<< HEAD
-Heroku url: https://agile-waters-63686.herokuapp.com/
-=======
-<<<<<<< Updated upstream
-=======
-
 ### Submission
 Heroku url: https://agile-waters-63686.herokuapp.com/
->>>>>>> Stashed changes
->>>>>>> hotfix/setting
+
 
 ## Timeline
 | Feature | Date | Estimated time|
@@ -21,11 +14,8 @@ Heroku url: https://agile-waters-63686.herokuapp.com/
 | Step 2 - DRF Endpoints   | 27/09   | 4hrs |
 | Step 3 - Nested Endpoints   | 28/09  | 2hrs |
 |  Deploying to Heroku |  29/09 | 3hrs  |
-<<<<<<< HEAD
-
-=======
 | Additional - Pagination| 29/09 | 20m |
->>>>>>> hotfix/setting
+
 
 ## Usage
 
